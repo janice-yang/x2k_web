@@ -5,15 +5,18 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.bmuschko:gradle-tomcat-plugin:2.4.2'
-        classpath "com.moowork.gradle:gradle-node-plugin:1.2.0"
+        // classpath 'com.bmuschko:gradle-tomcat-plugin:2.4.2'
+        classpath 'com.bmuschko:gradle-tomcat-plugin:2.5'
+        // classpath "com.moowork.gradle:gradle-node-plugin:1.2.0"
+        classpath "com.github.node-gradle:gradle-node-plugin:3.0.0-rc6"
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'war'
-apply plugin: 'com.moowork.node'
+// apply plugin: 'com.moowork.node'
+apply plugin: "com.github.node-gradle.node"
 apply plugin: 'com.bmuschko.tomcat'
 
 group = 'edu.mssm.pharm.maayanlab.x2k'
